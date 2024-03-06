@@ -28,6 +28,7 @@ h6 {
   letter-spacing: 0.04em;
   border-radius: @border-radius-sm;
   transition: @transition;
+  font-family: @font-secondary;
 
   &:hover {
     filter: brightness(110%);
@@ -93,12 +94,18 @@ h6 {
 
   .navbar-brand {
     img {
+      width: 280px;
+
       @media @breakpoint-tablet-xl {
-        max-width: 194px;
+        width: 194px;
       }
 
       @media @breakpoint-tablet {
-        max-width: 244px;
+        width: 244px;
+      }
+
+      @media @breakpoint-mobile {
+        width: 184px;
       }
     }
 
@@ -286,9 +293,13 @@ section {
     position: absolute;
     display: block;
     width: 100%;
-    height: 10%;
+    height: 84px;
     bottom: -1px;
     background-size: cover;
+
+    @media @breakpoint-desktop-xl {
+      height: 124px;
+    }
   }
 
   .hero-content {
@@ -308,18 +319,6 @@ section {
       margin-bottom: 30%;
     }
 
-    span {
-      font-size: 24px;
-      line-height: 1.5;
-      display: inline-flex;
-      font-weight: 400;
-
-
-      @media @breakpoint-desktop {
-        max-width: 60%;
-      }
-    }
-
     h1 {
       font-family: @font-secondary;
       font-size: 56px;
@@ -332,6 +331,18 @@ section {
 
       @media @breakpoint-mobile-sm {
         font-size: 40px;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 1.5;
+        display: inline-flex;
+        font-weight: 400;
+
+
+        @media @breakpoint-desktop {
+          max-width: 60%;
+        }
       }
     }
 
@@ -394,7 +405,36 @@ section {
       }
     }
   }
+
+
+  &.hero-section-short {
+    height: auto;
+    padding: 164px 40px 80px 40px;
+    background: @primary-dark;
+    text-align: center;
+
+    .hero-content {
+      @media @breakpoint-desktop {
+        max-width: 40%;
+      }
+
+      @media @breakpoint-mobile {
+        margin-bottom: 20%;
+      }
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-family: @font-secondary;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+  }
 }
+
 
 .services-section {
   .service-block {
@@ -406,14 +446,16 @@ section {
     position: relative;
     display: flex;
     min-height: 300px;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 
     @media @breakpoint-tablet {
       padding-top: 260px;
       padding-bottom: 24px;
       min-height: auto;
-      margin-bottom: 40px;
+      height: auto;
     }
 
     &:before {
@@ -424,7 +466,7 @@ section {
       display: block;
       top: 0;
       left: 0;
-      background-size: cover;
+      background-size: auto;
       background-position-y: -80px;
       background-repeat: no-repeat;
       background-position-x: center;
@@ -480,7 +522,73 @@ section {
       }
     }
   }
+
+  &.services-section__page {
+    h2 {
+      color: @brand;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: @primary;
+    }
+
+    p {
+      color: @primary;
+    }
+
+    .service-block {
+      justify-content: space-between;
+
+      @media @breakpoint-tablet {
+        padding-top: 200px;
+      }
+
+      .btn {
+        margin-top: auto;
+      }
+
+      &:before {
+        background-position-y: -120px;
+      }
+
+      &.service-page-block-first {
+
+        &:before {
+          background-image: url(../img/icon-service-page-01.svg);
+        }
+      }
+
+      &.service-page-block-second {
+
+        &:before {
+          background-image: url(../img/icon-service-page-02.svg);
+        }
+      }
+
+      &.service-page-block-third {
+
+        &:before {
+          background-image: url(../img/icon-service-page-03.svg);
+        }
+      }
+
+      &.service-page-block-forth {
+
+        &:before {
+          background-image: url(../img/icon-service-page-04.svg);
+        }
+      }
+    }
+  }
 }
+
+
 
 .quote-block__big {
   color: @primary-dark;
@@ -488,6 +596,7 @@ section {
   font-size: 20px;
   font-weight: 400;
   position: relative;
+  margin-bottom: 40px;
 
   &::before {
     content: url(../img/icon-quote-big.svg);
@@ -495,6 +604,11 @@ section {
     display: block;
     top: -8px;
     left: -32px;
+
+    @media @breakpoint-mobile {
+      top: -28px;
+      left: -4px;
+    }
   }
 }
 
@@ -678,17 +792,23 @@ section {
 }
 
 .cta-section {
-  h3 {
-    color: @primary-dark;
-    font-size: 36px;
-    font-weight: 700;
-  }
+  .cta-section__content {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 
-  p {
-    color: @primary-dark;
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 24px;
+    h3 {
+      color: @primary-dark;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    p {
+      color: @primary-dark;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -701,6 +821,7 @@ section {
 
     @media @breakpoint-tablet-xl {
       padding: 10%;
+      padding-bottom: 16%;
     }
 
     h3 {
@@ -737,6 +858,17 @@ footer {
   background: @primary-dark;
   padding-top: 80px;
   gap: 80px;
+  position: relative;
+
+  .badges {
+    position: absolute;
+    top: -45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
 
   .footer-bottom {
     padding: 24px 0;
@@ -917,4 +1049,50 @@ footer {
       color: white;
     }
   }
+}
+
+.note-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: @border-radius-sm;
+  border: 1px solid @neutral-dark;
+  padding: 40px;
+  padding-bottom: 32px;
+
+  @media @breakpoint-desktop {
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  p {
+    color: @primary-dark;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+}
+
+.events-section {
+  .events-section__intro {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid @neutral-dark;
+    margin-bottom: 48px;
+
+    a {
+      flex-shrink: 0;
+    }
+
+    @media @breakpoint-desktop {
+      padding: 0 20%;
+      padding-bottom: 40px;
+    }
+  }
+
+
+  .events {}
 }
