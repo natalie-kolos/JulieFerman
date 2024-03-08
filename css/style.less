@@ -32,11 +32,13 @@ h6 {
 
   &:hover {
     filter: brightness(110%);
+    transform: scale(1.05);
   }
 
   &.btn-custom__primary {
     color: @white;
     background-color: @primary;
+    transition: @transition;
 
     &:hover {
       color: @white;
@@ -138,6 +140,9 @@ h6 {
           opacity: .8;
         }
 
+        &.active {
+          color: @brand;
+        }
 
         @media @breakpoint-desktop {
           font-size: 14px;
@@ -319,6 +324,29 @@ section {
       margin-bottom: 30%;
     }
 
+    .hero-content__meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: @white;
+      opacity: .6;
+
+      .hero-content__meta__block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        gap: 8px;
+
+        p {
+          font-size: 16px;
+          font-weight: 300;
+          opacity: 0.6;
+          margin-bottom: 0;
+        }
+      }
+    }
+
     h1 {
       font-family: @font-secondary;
       font-size: 56px;
@@ -437,6 +465,16 @@ section {
 
 
 .services-section {
+  a {
+    &.service-block {
+
+      &:hover {
+        box-shadow: 0px 44px 32px -10px rgba(16, 42, 76, 0.04);
+        transform: scale(1.05);
+      }
+    }
+  }
+
   .service-block {
     padding: 40px;
     padding-top: 200px;
@@ -450,6 +488,11 @@ section {
     align-items: center;
     flex-direction: column;
     height: 100%;
+    transition: @transition;
+
+    .btn-custom {
+      z-index: 2;
+    }
 
     @media @breakpoint-tablet {
       padding-top: 260px;
@@ -471,6 +514,7 @@ section {
       background-repeat: no-repeat;
       background-position-x: center;
       background-position-y: -80px;
+      z-index: 1;
 
       @media @breakpoint-tablet {
         background-position-y: -110px;
@@ -1037,6 +1081,7 @@ footer {
     line-height: 1;
     letter-spacing: 1.4px;
     text-transform: uppercase;
+    transition: @transition;
 
     &.active a {
       background-color: @primary;
@@ -1120,7 +1165,7 @@ footer {
         .article-block__img {
           img {
             border-radius: @border-radius-sm;
-            box-shadow: 0px 44px 32px -10px rgba(16, 42, 76, 0.06);
+            box-shadow: @box-shadow;
           }
         }
       }
@@ -1335,11 +1380,121 @@ footer {
       color: @primary;
       font-family: @font-secondary;
       font-size: 20px;
+      transition: @transition;
 
       &:hover,
       &:active {
         color: @brand;
       }
     }
+  }
+}
+
+article {
+  border-bottom: 1px solid @neutral-dark;
+  padding-bottom: 56px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: @border-radius-sm;
+    box-shadow: @box-shadow;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: @primary-dark;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+}
+
+.read-more-section {
+  .read-more-section__title {
+    h3 {
+      color: @brand;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  .read-more-block {
+    border-bottom: 1px solid @neutral-dark;
+    padding-bottom: 32px;
+
+    .read-more-block__img {
+      margin-bottom: 16px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: @border-radius-sm;
+        box-shadow: @box-shadow;
+      }
+    }
+
+    .read-more-block__content {
+      h3 {
+        color: @primary-dark;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .read-more-block__img {
+    margin-bottom: 24px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: @border-radius-sm;
+      box-shadow: @box-shadow;
+
+    }
+  }
+
+
+  .read-more-block__meta__block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 8px;
+
+    p {
+      color: @primary-dark;
+      font-size: 16px;
+      font-weight: 300;
+      opacity: .6;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.join-section {
+
+  .join-section-title {
+    margin-bottom: 32px;
+
+    h2 {
+      color: @primary-dark;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: @primary;
+    }
+  }
+
+  img {
+    border-radius: @border-radius-sm;
+    box-shadow: @box-shadow;
   }
 }
