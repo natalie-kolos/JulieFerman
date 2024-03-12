@@ -1396,3 +1396,20 @@ article p {
   border-radius: 4px;
   box-shadow: 0px 44px 32px -10px rgba(16, 42, 76, 0.06);
 }
+.cta-form .form-floating label {
+  color: #fff;
+  background-color: transparent;
+}
+.cta-form .form-floating .form-control {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+  color: #fff;
+}
+.cta-form .form-floating .form-control:focus ~ label {
+  color: rgba(255, 255, 255, 0.74);
+}
+.cta-form .form-floating .form-control:focus ~ label::after {
+  background-color: transparent;
+}

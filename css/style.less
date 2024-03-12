@@ -1507,3 +1507,35 @@ article {
     box-shadow: @box-shadow;
   }
 }
+
+.cta-form {
+  .form-floating {
+    label {
+      color: @white;
+      background-color: transparent;
+    }
+
+    .form-control {
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+      color: @white;
+
+      &::placeholder {
+        // color: #00ff00;
+      }
+
+      &:focus {
+        &~label {
+          color: rgb(255 255 255 / 74%);
+
+
+          &::after {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
