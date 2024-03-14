@@ -125,6 +125,13 @@ h6 {
       justify-content: flex-end;
       display: flex;
 
+      &.current-menu-item {
+        a {
+          color: @brand;
+        }
+
+      }
+
       .nav-link {
         color: @white;
         padding-left: 20px;
@@ -138,10 +145,6 @@ h6 {
 
         &:hover {
           opacity: .8;
-        }
-
-        &.active {
-          color: @brand;
         }
 
         @media @breakpoint-desktop {

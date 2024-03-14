@@ -244,6 +244,9 @@ h6 {
   justify-content: flex-end;
   display: flex;
 }
+.navbar-custom .navbar-nav .nav-item.current-menu-item a {
+  color: #B11768;
+}
 .navbar-custom .navbar-nav .nav-item .nav-link {
   color: #fff;
   padding-left: 20px;
@@ -257,9 +260,6 @@ h6 {
 }
 .navbar-custom .navbar-nav .nav-item .nav-link:hover {
   opacity: 0.8;
-}
-.navbar-custom .navbar-nav .nav-item .nav-link.active {
-  color: #B11768;
 }
 @media (min-width: 1400px) {
   .navbar-custom .navbar-nav .nav-item .nav-link {
