@@ -1314,6 +1314,10 @@ footer .footer-content .social-icons li a:hover {
 .pagination .page-item .page-link:active {
   color: #B11768;
 }
+.pagination .page-item .page-link.current {
+  color: #B11768;
+  font-weight: 700;
+}
 article {
   border-bottom: 1px solid #E6E8EE;
   padding-bottom: 56px;
