@@ -1199,7 +1199,7 @@ footer .footer-content .social-icons li a:hover {
 .media-section .media-block .media-block__img img {
   border-radius: 4px;
 }
-.media-section .media-block .media-block__content .media-company-info {
+.media-company-info {
   display: flex;
   padding: 16px 24px;
   align-items: center;
@@ -1208,30 +1208,30 @@ footer .footer-content .social-icons li a:hover {
   background: #EFF0F1;
   margin-bottom: 24px;
 }
-.media-section .media-block .media-block__content .media-company-info .media-company-info__img {
+.media-company-info .media-company-info__img {
   flex-shrink: 0;
 }
-.media-section .media-block .media-block__content .media-company-info .media-company-info__img img {
+.media-company-info .media-company-info__img img {
   width: 96px;
 }
-.media-section .media-block .media-block__content .media-company-info .media-company-info__description h4 {
+.media-company-info .media-company-info__description h4 {
   color: #001E45;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 4px;
 }
-.media-section .media-block .media-block__content .media-company-info .media-company-info__description p {
+.media-company-info .media-company-info__description p {
   color: #001E45;
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 4px;
 }
-.media-section .media-block .media-block__content .media-company-info .media-company-info__description .external-link {
+.media-company-info .media-company-info__description .external-link {
   color: #B11768;
   font-size: 14px;
   font-weight: 700;
 }
-.media-section .media-block .media-block__content .media-company-info .media-company-info__description .external-link:before {
+.media-company-info .media-company-info__description .external-link:before {
   content: url(../img/icon-link-out.svg);
   display: inline-block;
   position: relative;
