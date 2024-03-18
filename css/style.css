@@ -1314,7 +1314,7 @@ footer .footer-content .social-icons li a:hover {
 .pagination .page-item .page-link:active {
   color: #B11768;
 }
-.pagination .page-item .page-link.current {
+.pagination .page-item .current {
   color: #B11768;
   font-weight: 700;
 }
