@@ -213,6 +213,12 @@ h6 {
     background-color: #001E45;
   }
 }
+@media (max-width: 767px) {
+  .navbar-custom {
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+}
 .navbar-custom .navbar-brand img {
   width: 280px;
 }
@@ -392,6 +398,12 @@ section.section-dark .section-title .title {
 @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .hero-section {
     background: url('../img/img-hero@2x.jpg') no-repeat center top;
+  }
+}
+@media (max-width: 767px) {
+  .hero-section {
+    height: auto;
+    padding-top: 160px;
   }
 }
 .hero-section::before {

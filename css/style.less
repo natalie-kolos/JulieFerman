@@ -94,6 +94,11 @@ h6 {
     background-color: @primary-dark;
   }
 
+  @media @breakpoint-mobile {
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+
   .navbar-brand {
     img {
       width: 280px;
@@ -298,6 +303,11 @@ section {
   @media only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
     background: url('../img/img-hero@2x.jpg') no-repeat center top;
+  }
+
+  @media @breakpoint-mobile {
+    height: auto;
+    padding-top: 160px;
   }
 
   &::before {
