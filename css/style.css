@@ -120,21 +120,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLBT5V1s.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLBT5V1s.ttf) format('truetype');
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -258,7 +258,7 @@ h6 {
   padding-left: 20px;
   padding-right: 20px;
   font-family: "Cardo", serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -429,10 +429,12 @@ section.section-dark .section-title .title {
   max-width: 80%;
   line-height: 1;
   margin-bottom: 44px;
+  padding-top: 160px;
 }
 @media (max-width: 767px) {
   .hero-section .hero-content {
     margin-bottom: 20%;
+    padding-top: 24px;
   }
 }
 @media (max-width: 575px) {
@@ -1210,6 +1212,12 @@ footer .footer-content .social-icons li a:hover {
 }
 .media-section .media-block .media-block__img img {
   border-radius: 4px;
+}
+.media-section .media-block .media-block__img.media-block__video iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .media-company-info {
   display: flex;

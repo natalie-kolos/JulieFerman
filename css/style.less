@@ -142,11 +142,11 @@ h6 {
         padding-left: 20px;
         padding-right: 20px;
         font-family: @font-secondary;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 700;
         letter-spacing: 1.4px;
         text-transform: uppercase;
-        transition: @transition;
+        transition: @transition;        
 
         &:hover {
           opacity: .8;
@@ -333,9 +333,11 @@ section {
     max-width: 80%;
     line-height: 1;
     margin-bottom: 44px;
+    padding-top: 160px;
 
     @media @breakpoint-mobile {
       margin-bottom: 20%;
+      padding-top: 24px;
     }
 
     @media @breakpoint-mobile-sm {
@@ -1257,6 +1259,14 @@ footer {
 
       img {
         border-radius: @border-radius-sm;
+      }
+      &.media-block__video{
+        iframe{
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        }
       }
 
     }
